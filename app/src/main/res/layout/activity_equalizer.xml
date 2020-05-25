@@ -1,0 +1,498 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_above="@+id/bottomController"
+    android:background="?colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="?colorPrimary"
+        app:elevation="0dp"
+        tools:ignore="UnusedAttribute">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/toolbar_card"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false"
+            app:strokeColor="#919191"
+            app:strokeWidth="1dp">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?colorPrimary"
+                app:elevation="0dp"
+                app:layout_collapseMode="pin"
+                tools:ignore="UnusedAttribute">
+
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.card.MaterialCardView>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:windowBackground"
+        android:paddingStart="16dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/presetLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/select_preset"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/default_textview_text_size_primary" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorTextSecondaryDarkTheme"
+                    app:cardCornerRadius="8dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/preset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:spinnerMode="dialog"
+                        app:ms_arrow_tint="@android:color/black"
+                        app:ms_background_color="@color/colorTextSecondaryDarkTheme"
+                        app:ms_text_color="@android:color/black" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/equalizerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/card_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp">
+
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:text="45d"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp" />
+
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_above="@id/text1">
+
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                            android:id="@+id/seekBar1"
+                            style="@style/CustomProgressBarHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:padding="10dp"
+                            android:progress="100"
+                            android:progressDrawable="@drawable/progress_drawable"
+                            android:thumb="@drawable/ic_thumb"
+                            android:thumbOffset="5dp"
+                            app:seekBarRotation="CW270" />
+                    </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp">
+
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:text="45d"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp" />
+
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_above="@id/text2">
+
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                            android:id="@+id/seekBar2"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:padding="10dp"
+                            android:progress="45"
+                            android:thumbOffset="5dp"
+                            style="@style/CustomProgressBarHorizontal"
+                            android:progressDrawable="@drawable/progress_drawable"
+                            android:thumb="@drawable/ic_thumb"
+                            app:seekBarRotation="CW270" />
+                    </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp">
+
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:text="45d"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp" />
+
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_above="@id/text3">
+
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                            android:id="@+id/seekBar3"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:padding="10dp"
+                            android:progress="45"
+                            android:thumbOffset="5dp"
+                            style="@style/CustomProgressBarHorizontal"
+                            android:progressDrawable="@drawable/progress_drawable"
+                            android:scrollbarSize="10dp"
+                            android:thumb="@drawable/ic_thumb"
+                            app:seekBarRotation="CW270" />
+                    </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp">
+
+
+                    <TextView
+                        android:id="@+id/text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:text="45d"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp" />
+
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_above="@id/text4">
+
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                            android:id="@+id/seekBar4"
+                            style="@style/CustomProgressBarHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:padding="10dp"
+                            android:progress="45"
+                            android:progressDrawable="@drawable/progress_drawable"
+                            android:thumb="@drawable/ic_thumb"
+                            android:thumbOffset="5dp"
+                            app:seekBarRotation="CW270" />
+                    </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp">
+
+
+                    <TextView
+                        android:id="@+id/text5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:text="45d"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="16sp" />
+
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_above="@id/text5">
+
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                            android:id="@+id/seekBar5"
+                            style="@style/CustomProgressBarHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:padding="10dp"
+                            android:progress="45"
+                            android:progressDrawable="@drawable/progress_drawable"
+                            android:scrollbarSize="10dp"
+                            android:thumb="@drawable/ic_thumb"
+                            android:thumbOffset="5dp"
+                            app:seekBarRotation="CW270" />
+                    </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/reverbLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/select_preset_reverb"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/default_textview_text_size_primary" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorTextSecondaryDarkTheme"
+                    app:cardCornerRadius="8dp">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/reverb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        app:ms_arrow_tint="@android:color/black"
+                        app:ms_background_color="@color/colorTextSecondaryDarkTheme"
+                        app:ms_text_color="@android:color/black" />
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bassLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/card_background"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <com.sdsmdg.harjot.crollerTest.Croller
+                            android:id="@+id/bassBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="130dp"
+                            android:layout_gravity="center_horizontal"
+                            app:back_circle_color="@android:color/transparent"
+                            app:indicator_color="?attr/colorAccent"
+                            app:indicator_width="10"
+                            app:is_continuous="true"
+                            app:label=""
+                            app:label_color="@color/colorTextPrimaryDarkTheme"
+                            app:main_circle_color="#5E5F5F"
+                            app:max="1000"
+                            app:progress_primary_color="?attr/colorAccent"
+                            app:progress_primary_stroke_width="15"
+                            app:progress_secondary_color="#828282"
+                            app:progress_secondary_stroke_width="10"
+                            app:start_offset="80" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:text="@string/bassboost"
+                            android:textColor="?android:textColorPrimary"
+                            android:textSize="@dimen/default_textview_text_size_primary" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.sdsmdg.harjot.crollerTest.Croller
+                            android:id="@+id/virtualizerBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="130dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            app:back_circle_color="@android:color/transparent"
+                            app:indicator_color="?attr/colorAccent"
+                            app:indicator_width="10"
+                            app:is_continuous="true"
+                            app:label=""
+                            app:label_color="@color/colorTextPrimaryDarkTheme"
+                            app:main_circle_color="#5E5F5F"
+                            app:max="1000"
+                            app:progress_primary_color="?attr/colorAccent"
+                            app:progress_primary_stroke_width="15"
+                            app:progress_secondary_color="#828282"
+                            app:progress_secondary_stroke_width="10"
+                            app:start_offset="80" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="@string/virtualizer"
+                            android:textColor="?android:textColorPrimary"
+                            android:textSize="@dimen/default_textview_text_size_primary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/volumeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="VOLUME"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="@dimen/default_textview_text_size_primary" />
+
+                <SeekBar
+                    android:id="@+id/volumenSeekBar"
+                    style="@style/CustomProgressBarHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/progress_drawable"
+                    android:thumb="@drawable/ic_thumb"
+                    android:thumbOffset="5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/itemOnClicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="3dp"
+        android:background="@drawable/border"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <music.hs.com.materialmusicv2.customviews.others.RoundedSquareImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/album_art_content_description"
+            android:padding="12dp"
+            android:scaleType="centerCrop"
+            android:transitionName="artistImage"
+            app:cornerRadius="8dp"
+            android:background="@drawable/card_background"
+            app:roundedCorners="topLeft|topRight"
+            app:srcCompat="@drawable/ic_template_cd"
+            tools:targetApi="lollipop" />
+
+    </RelativeLayout>
+</RelativeLayout>

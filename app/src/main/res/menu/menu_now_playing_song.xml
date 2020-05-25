@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_add_to_playlist"
+        android:icon="@drawable/ic_add_playlist"
+        android:title="@string/add_to_playlist" />
+    <item
+        android:id="@+id/action_edit"
+        android:icon="@drawable/ic_edit_black"
+        android:title="@string/edit_song_info" />
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="Share song using" />
+</menu>

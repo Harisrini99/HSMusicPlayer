@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@+id/songProgress"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:indeterminate="false"
+        app:mpb_progressStyle="horizontal"
+        app:mpb_useIntrinsicPadding="false" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:id="@+id/imgLayout"
+           android:layout_alignParentStart="true"
+           android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/up"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/play_pause_button_content_description"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_blank_album_art" />
+
+           <io.gresse.hugo.vumeterlibrary.VuMeterView
+               android:id="@+id/vumeter"
+               android:layout_width="25dp"
+               android:layout_height="30dp"
+               android:layout_centerInParent="true"
+               app:vumeter_backgroundColor="?attr/colorAccent"
+               app:vumeter_blockNumber="3"
+               app:vumeter_blockSpacing="3dp"
+               app:vumeter_speed="5"
+               app:vumeter_startOff="true"
+               app:vumeter_stopSize="10dp" />
+
+       </RelativeLayout>
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/library_item_gridsize_1_textview_height"
+            android:layout_marginStart="@dimen/textview_margin_start_end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/textview_margin_start_end"
+            android:layout_toStartOf="@id/playPre"
+            android:layout_toEndOf="@+id/imgLayout"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:text="sldhsdhsdkjhsjdkhsdkjhsjkdhskjdhkjsdhkjshd"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/atristname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/library_item_gridsize_1_textview_height"
+            android:layout_below="@+id/songName"
+            android:layout_marginStart="@dimen/textview_margin_start_end"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="@dimen/textview_margin_start_end"
+            android:layout_toStartOf="@id/playPre"
+            android:layout_toEndOf="@+id/imgLayout"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:maxLines="1"
+            android:text="sldhsdhsdkjhsjdkhsdkjhsjkdhskjdhkjsdhkjshd"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/playPre"
+            android:layout_width="@dimen/main_screen_controller_imagebutton_height"
+            android:layout_height="@dimen/main_screen_controller_imagebutton_height"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/playPause"
+            android:padding="@dimen/image_button_padding"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/menu_button_content_description"
+            android:tint="?android:textColorPrimary"
+            app:srcCompat="@drawable/ic_skip_previous_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/playPause"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/playNext"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/menu_button_content_description"
+            android:tint="?android:textColorPrimary"
+            app:srcCompat="@drawable/ic_play_arrow_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/playNext"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/menu_button_content_description"
+            android:tint="?android:textColorPrimary"
+            app:srcCompat="@drawable/ic_skip_next_white_24dp" />
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

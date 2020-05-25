@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/card_background"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/bock"
+            android:text="Color Picker"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:id="@+id/t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <com.larswerkman.holocolorpicker.ColorPicker
+                android:id="@+id/picker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                tools:layout_editor_absoluteX="63dp"
+                tools:layout_editor_absoluteY="261dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/dark_background"
+                android:clickable="false"
+                android:foreground="@drawable/border"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/templateLayout"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/centerImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:background="#FF3A3A3A"
+                        android:padding="40dp"
+                        app:srcCompat="@drawable/ic_template_cd" />
+
+                    <TextView
+                        android:id="@+id/downText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/toptext"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="155dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#00FFFFFF"
+                        android:backgroundTint="#00FFFFFF"
+                        android:fontFamily="@font/bock"
+                        android:gravity="center_horizontal"
+                        android:text="Your Text Here"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#909090"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/toptext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#00FFFFFF"
+                        android:backgroundTint="#00FFFFFF"
+                        android:fontFamily="@font/bock"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:text="Your Text Here"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#909090"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.larswerkman.holocolorpicker.OpacityBar
+            android:id="@+id/opacitybar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="644dp" />
+
+        <com.larswerkman.holocolorpicker.SVBar
+            android:id="@+id/svbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="578dp" />
+
+        <com.larswerkman.holocolorpicker.SaturationBar
+            android:id="@+id/saturationbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"/>
+
+        <com.larswerkman.holocolorpicker.ValueBar
+            android:id="@+id/valuebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+
+        <Button
+            android:id="@+id/selectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/buy_pro_button_background"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Select Color"
+            android:textColor="#000000"
+            android:textSize="@dimen/default_textview_text_size_secondary"
+            android:textStyle="bold"
+            app:backgroundTint="@color/md_white_1000" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

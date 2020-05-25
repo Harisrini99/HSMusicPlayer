@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "478353229318",
+    "firebase_url": "https://hsmusicplayer.firebaseio.com",
+    "project_id": "hsmusicplayer",
+    "storage_bucket": "hsmusicplayer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478353229318:android:cf790aa83ceaa25dbae587",
+        "android_client_info": {
+          "package_name": "music.hs.com.materialmusicv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478353229318-sa6l2cuompooe3r95fo75rnuu14uhet6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "music.hs.com.materialmusicv2",
+            "certificate_hash": "8a9c764d31ec82fce2f785c2f8a65458c6a4b244"
+          }
+        },
+        {
+          "client_id": "478353229318-vo4iesvjr2hd42d6ic9j689fjab11r0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhKcCsCaVRnlyAz3edGDnpTr6oa2NzoPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478353229318-vo4iesvjr2hd42d6ic9j689fjab11r0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

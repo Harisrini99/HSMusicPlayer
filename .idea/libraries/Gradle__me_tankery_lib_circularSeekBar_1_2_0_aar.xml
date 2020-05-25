@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: me.tankery.lib:circularSeekBar:1.2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/237e8e95031a938bea286d13aed4c7be/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/237e8e95031a938bea286d13aed4c7be/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.tankery.lib/circularSeekBar/1.2.0/6f5668602631e3c3cd2d930c3ea342de6c5af2b5/circularSeekBar-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/dark_background"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:id="@+id/itemOnClicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/songLyrics">
+
+            <TextView
+                android:id="@+id/songName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toStartOf="@+id/menu"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Aalaporaan Thamizhan"
+                android:textAlignment="center"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/songArtist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/songName"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/menu"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="A. R. Rahman, Kailash Kher, Sathyaprakash Dharmar, Deepak and Pooja AV"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextSecondaryDarkTheme"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/songDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/songArtist"
+                android:layout_marginBottom="3dp"
+                android:layout_toStartOf="@+id/menu"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="05:48"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextSecondaryDarkTheme"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/songLyrics"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/md_grey_500"
+            android:padding="10dp"
+            android:text="sdsdsd"
+            android:textAlignment="center"
+            android:textColor="@color/browser_actions_bg_grey"
+            android:textSize="10sp" />
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
